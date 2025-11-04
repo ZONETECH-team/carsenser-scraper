@@ -123,10 +123,18 @@ def extract_car_details(page: Page, url: str) -> Optional[Dict[str, str]]:
 
         # 車名を抽出
         name = "不明"
+        description = ""
         try:
             h1_element = page.query_selector('h1')
             if h1_element:
-                name = h1_element.inner_text().strip()
+                full_name = h1_element.inner_text().strip()
+                # \nで分割して、最初の部分をname、残りをdescriptionに
+                if '\n' in full_name:
+                    parts = full_name.split('\n', 1)
+                    name = parts[0].strip()
+                    description = parts[1].strip() if len(parts) > 1 else ""
+                else:
+                    name = full_name
         except:
             pass
 
@@ -159,6 +167,7 @@ def extract_car_details(page: Page, url: str) -> Optional[Dict[str, str]]:
 
         car_data = {
             "name": name,
+            "description": description,
             "year": year,
             "mileage": mileage,
             "engine_size": engine_size,
