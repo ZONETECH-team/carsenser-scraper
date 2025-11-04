@@ -1,0 +1,268 @@
+#!/usr/bin/env python3
+"""
+カーセンサー在庫スクレイピングスクリプト (Playwright版)
+オートボディ菅原の在庫情報を取得しJSON出力
+"""
+
+import json
+import time
+import logging
+import re
+from typing import List, Dict, Optional
+from urllib.parse import urljoin
+
+from playwright.sync_api import sync_playwright, Page, TimeoutError as PlaywrightTimeout
+
+# ロギング設定
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+# 定数
+BASE_URL = "https://www.carsensor.net"
+SHOP_URL = "https://www.carsensor.net/shop/miyagi/326411001/stocklist/"
+OUTPUT_FILE = "data/carsensor_inventory.json"
+REQUEST_DELAY = 2  # リクエスト間隔（秒）
+PAGE_TIMEOUT = 30000  # ページ読み込みタイムアウト（ミリ秒）
+
+# User-Agent
+USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+
+
+def extract_car_links(page: Page) -> List[str]:
+    """
+    在庫リストページから各車両の詳細ページURLを抽出
+
+    Args:
+        page: Playwrightページオブジェクト
+
+    Returns:
+        車両詳細ページURLのリスト
+    """
+    links = []
+
+    try:
+        # 車両リンクを抽出
+        car_items = page.query_selector_all('a[href*="/usedcar/detail/"]')
+
+        for item in car_items:
+            href = item.get_attribute('href')
+            if href:
+                full_url = urljoin(BASE_URL, href)
+                if full_url not in links:
+                    links.append(full_url)
+
+        logger.info(f"Found {len(links)} car links")
+        return links
+
+    except Exception as e:
+        logger.error(f"Failed to extract car links: {e}")
+        return []
+
+
+def extract_table_value(page: Page, label: str) -> str:
+    """
+    テーブルから特定のラベルに対応する値を抽出
+
+    Args:
+        page: Playwrightページオブジェクト
+        label: 検索するラベル（例: "年式", "走行距離"）
+
+    Returns:
+        抽出された値（見つからない場合は空文字列）
+    """
+    try:
+        # すべてのthタグを取得
+        th_elements = page.query_selector_all('th.defaultTable__head')
+
+        for th in th_elements:
+            th_text = th.inner_text()
+            if label in th_text:
+                # 同じ行のtd要素を取得
+                td = th.evaluate('el => el.parentElement?.querySelector("td.defaultTable__description")')
+                if td:
+                    # tdのテキストを取得
+                    value = th.evaluate('el => el.parentElement?.querySelector("td.defaultTable__description")?.innerText')
+                    if value:
+                        return value.strip()
+        return ""
+
+    except Exception as e:
+        logger.debug(f"Failed to extract table value for '{label}': {e}")
+        return ""
+
+
+def extract_car_details(page: Page, url: str) -> Optional[Dict[str, str]]:
+    """
+    車両詳細ページから情報を抽出
+
+    Args:
+        page: Playwrightページオブジェクト
+        url: 車両詳細ページのURL
+
+    Returns:
+        車両情報の辞書、失敗時はNone
+    """
+    try:
+        logger.info(f"Fetching: {url}")
+
+        # ページにアクセス
+        page.goto(url, wait_until='networkidle', timeout=PAGE_TIMEOUT)
+
+        # ページが完全に読み込まれるまで少し待機
+        page.wait_for_timeout(1000)
+
+        # 車名を抽出
+        name = "不明"
+        try:
+            h1_element = page.query_selector('h1')
+            if h1_element:
+                name = h1_element.inner_text().strip()
+        except:
+            pass
+
+        # 価格を抽出
+        price = ""
+        try:
+            price_element = page.query_selector('p.basePrice__price')
+            if price_element:
+                price_text = price_element.inner_text().strip()
+                # 価格を整形（改行を削除して統一）
+                price = re.sub(r'\s+', '', price_text)
+        except:
+            pass
+
+        # テーブル情報を抽出
+        year = extract_table_value(page, '年式')
+        mileage = extract_table_value(page, '走行距離')
+        engine_size = extract_table_value(page, '排気量')
+        inspection = extract_table_value(page, '車検')
+        repair_history = extract_table_value(page, '修復歴')
+
+        # メイン画像URLを抽出
+        image_url = ""
+        try:
+            img_element = page.query_selector('img[class*="main"]')
+            if img_element:
+                image_url = img_element.get_attribute('src') or ''
+        except:
+            pass
+
+        car_data = {
+            "name": name,
+            "year": year,
+            "mileage": mileage,
+            "engine_size": engine_size,
+            "inspection": inspection,
+            "repair_history": repair_history,
+            "price": price,
+            "image_url": image_url,
+            "detail_link": url
+        }
+
+        logger.info(f"Extracted: {name} - {price}")
+        return car_data
+
+    except PlaywrightTimeout:
+        logger.error(f"Timeout loading page: {url}")
+        return None
+    except Exception as e:
+        logger.error(f"Failed to extract details from {url}: {e}")
+        return None
+
+
+def scrape_inventory() -> List[Dict[str, str]]:
+    """
+    在庫リスト全体をスクレイピング
+
+    Returns:
+        車両情報のリスト
+    """
+    logger.info("Starting scraping process...")
+    inventory = []
+
+    with sync_playwright() as p:
+        # ブラウザを起動
+        browser = p.chromium.launch(headless=True)
+        context = browser.new_context(user_agent=USER_AGENT)
+        page = context.new_page()
+
+        try:
+            # 在庫リストページにアクセス
+            logger.info(f"Fetching shop page: {SHOP_URL}")
+            page.goto(SHOP_URL, wait_until='networkidle', timeout=PAGE_TIMEOUT)
+            page.wait_for_timeout(2000)
+
+            # 車両リンクを抽出
+            car_links = extract_car_links(page)
+            if not car_links:
+                logger.warning("No car links found")
+                return []
+
+            # 各車両の詳細を取得
+            for i, link in enumerate(car_links, 1):
+                logger.info(f"Processing car {i}/{len(car_links)}")
+
+                car_data = extract_car_details(page, link)
+                if car_data:
+                    inventory.append(car_data)
+
+                # サーバーに負荷をかけないよう待機
+                if i < len(car_links):
+                    time.sleep(REQUEST_DELAY)
+
+            logger.info(f"Successfully scraped {len(inventory)} cars")
+
+        except PlaywrightTimeout:
+            logger.error("Timeout loading shop page")
+        except Exception as e:
+            logger.error(f"Error during scraping: {e}")
+        finally:
+            browser.close()
+
+    return inventory
+
+
+def save_to_json(data: List[Dict[str, str]], filepath: str) -> bool:
+    """
+    データをJSON形式で保存
+
+    Args:
+        data: 保存するデータ
+        filepath: 保存先ファイルパス
+
+    Returns:
+        成功時True、失敗時False
+    """
+    try:
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        logger.info(f"Data saved to {filepath}")
+        return True
+    except Exception as e:
+        logger.error(f"Failed to save data: {e}")
+        return False
+
+
+def main():
+    """メイン処理"""
+    start_time = time.time()
+
+    # スクレイピング実行
+    inventory = scrape_inventory()
+
+    # JSON保存
+    if inventory:
+        save_to_json(inventory, OUTPUT_FILE)
+        logger.info(f"Scraping completed in {time.time() - start_time:.2f} seconds")
+    else:
+        logger.error("No data to save")
+        return 1
+
+    return 0
+
+
+if __name__ == "__main__":
+    exit(main())
