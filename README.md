@@ -6,7 +6,7 @@
 
 - カーセンサーの店舗ページから在庫情報を自動取得
 - JSON形式で出力（WordPress連携対応）
-- Render上で毎日自動実行
+- ローカル環境で手動実行
 - robots.txt遵守、適切なアクセス間隔を確保
 
 ## 📋 必要要件
@@ -15,12 +15,18 @@
 - pip
 - Playwright（Chromiumブラウザを含む）
 
-## 🚀 ローカルでの実行
+## ⚡ クイックスタート
 
-### 1. セットアップ
+**初めての方は [クイックスタートガイド](QUICKSTART.md) をご覧ください！**
+
+5分で実行できるステップバイステップガイドです。
+
+## 🚀 セットアップと実行
+
+### 1. 依存パッケージのインストール
 
 ```bash
-# リポジトリをクローン
+# リポジトリをクローン（初回のみ）
 git clone https://github.com/yourusername/carsensor-scraper.git
 cd carsensor-scraper
 
@@ -31,42 +37,58 @@ pip install -r requirements.txt
 playwright install chromium
 ```
 
-### 2. 実行
+### 2. 環境変数の設定
+
+```bash
+# .envファイルを作成（初回のみ）
+cp .env.example .env
+
+# 必要に応じて編集（デフォルトのままでOK）
+# vim .env または nano .env
+```
+
+### 3. 実行
 
 ```bash
 python scraper.py
 ```
 
-実行後、`data/carsensor_inventory.json` にデータが出力されます。
+**実行後**: `data/carsensor_inventory.json` にデータが出力されます。
 
-## ☁️ Renderへのデプロイ
+### 4. データの確認
 
-このプロジェクトは**完全無料**でRenderにデプロイできます。
+```bash
+# JSON形式で表示
+cat data/carsensor_inventory.json | python -m json.tool
 
-### クイックスタート
+# または、ファイルを直接開く
+open data/carsensor_inventory.json
+```
 
-1. GitHubリポジトリを作成・プッシュ
-2. [GitHub Personal Access Token](https://github.com/settings/tokens) を作成（`repo`スコープ）
-3. [Render](https://render.com)でBlueprint経由でデプロイ
-4. 環境変数 `GITHUB_TOKEN` を設定
+## 📅 定期実行の設定（オプション）
+
+### macOS/Linuxの場合（cron）
+
+```bash
+# crontabを編集
+crontab -e
+
+# 毎日18時に実行する例
+0 18 * * * cd /path/to/carsenser-scraper && /usr/local/bin/python3 scraper.py >> logs/scraper.log 2>&1
+```
+
+### Windowsの場合（タスクスケジューラ）
+
+1. 「タスクスケジューラ」を開く
+2. 「基本タスクの作成」を選択
+3. トリガー: 毎日、時刻を指定
+4. 操作: `python.exe scraper.py` を実行
+
+## ☁️ クラウドでの自動実行（オプション）
+
+ローカルPCを常時起動できない場合は、Renderで自動実行できます。
 
 **詳細な手順は [デプロイガイド](docks/DEPLOY.md) を参照してください。**
-
-### データの取得方法
-
-スクレイピング結果は自動的にGitHubリポジトリにプッシュされます。
-以下のURLで取得可能：
-
-```
-https://raw.githubusercontent.com/zonehisa/carsenser-scraper/main/data/carsensor_inventory.json
-```
-
-JavaScriptでの取得例：
-```javascript
-fetch('https://raw.githubusercontent.com/zonehisa/carsenser-scraper/main/data/carsensor_inventory.json')
-  .then(response => response.json())
-  .then(data => console.log(data));
-```
 
 ## 📄 出力フォーマット
 
@@ -88,50 +110,96 @@ fetch('https://raw.githubusercontent.com/zonehisa/carsenser-scraper/main/data/ca
 
 ## 🔧 カスタマイズ
 
-### スクレイピング対象の変更
+`.env` ファイルを編集することで、動作をカスタマイズできます。
 
-`scraper.py` の以下の定数を変更:
+### 主な設定項目
 
-```python
-SHOP_URL = "https://www.carsensor.net/shop/miyagi/326411001/stocklist/"
+#### スクレイピング対象店舗の変更
+
+他の店舗をスクレイピングする場合:
+
+```bash
+# .env
+SHOP_URL=https://www.carsensor.net/shop/都道府県/店舗ID/stocklist/
 ```
 
-### リクエスト間隔の調整
+#### リクエスト間隔の調整
 
-```python
-REQUEST_DELAY = 2  # 秒単位
+サーバーへの負荷を考慮して調整:
+
+```bash
+# .env
+REQUEST_DELAY=2  # 秒単位（2秒以上推奨）
 ```
 
-### 出力先の変更
+#### 出力ファイルの変更
 
-```python
-OUTPUT_FILE = "data/carsensor_inventory.json"
+```bash
+# .env
+OUTPUT_FILE=data/my_inventory.json
 ```
 
-## 🔌 WordPress連携
+#### 自動Git Push（オプション）
 
-### プラグインでの使用
+実行後に自動的にGitHubへプッシュする場合:
 
-WordPressプラグイン「CarSensor Sync」（別途開発予定）を使用して、
-GitHub Raw URLから在庫情報を取得し、サイト上に表示できます。
+```bash
+# .env
+AUTO_GIT_PUSH=true
+GITHUB_TOKEN=ghp_xxxxxxxxxxxxx
+GITHUB_USER_NAME=Bot Name
+GITHUB_USER_EMAIL=bot@example.com
+```
 
-### 手動での使用
+**通常はfalse（手動）で問題ありません。**
+
+## 🔌 データの活用
+
+### WordPressでの使用
+
+JSONファイルをWordPressで読み込む例:
 
 ```php
-$json_url = 'https://raw.githubusercontent.com/zonehisa/carsenser-scraper/main/data/carsensor_inventory.json';
-$inventory = json_decode(file_get_contents($json_url), true);
+// ローカルファイルから読み込む
+$json_path = '/path/to/carsensor_inventory.json';
+$inventory = json_decode(file_get_contents($json_path), true);
 
 foreach ($inventory as $car) {
+    echo "<div class='car-item'>";
     echo "<h3>{$car['name']}</h3>";
     echo "<p>価格: {$car['price']}</p>";
-    // ...
+    echo "<p>走行距離: {$car['mileage']}</p>";
+    echo "</div>";
 }
 ```
 
-## 📝 ログ
+### JavaScriptでの使用
+
+```javascript
+// ローカルサーバーまたはGitHub経由
+fetch('data/carsensor_inventory.json')
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(car => {
+      console.log(`${car.name} - ${car.price}`);
+    });
+  });
+```
+
+## 📝 ログとデバッグ
 
 スクリプト実行時に標準出力にログが出力されます。
-Renderのダッシュボードからログを確認できます。
+
+```bash
+# 通常実行
+python scraper.py
+
+# ログをファイルに保存
+python scraper.py > logs/scraper_$(date +%Y%m%d).log 2>&1
+
+# リアルタイムでログを確認しながら保存
+python scraper.py 2>&1 | tee logs/scraper.log
+```
 
 ## ⚠️ 注意事項
 
@@ -164,5 +232,7 @@ MIT License
 
 ## 📅 更新履歴
 
+- 2025-11-04: ローカル実行運用に変更、自動Git Pushをオプション化
+- 2025-11-04: .env対応、環境変数からの設定読み込み
 - 2025-11-04: Playwrightへの移行（実際のHTML構造に対応した正しいセレクタを実装）
 - 2024-11-04: 初回リリース

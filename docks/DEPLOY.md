@@ -1,12 +1,31 @@
-# Renderへのデプロイ手順
+# Renderへのデプロイ手順（オプション）
+
+> ⚠️ **注意**: このドキュメントはオプションです。
+> 
+> **ローカルで手動実行する場合は、このデプロイ作業は不要です。**
+> 
+> Renderでのクラウド自動実行が必要な場合のみ、以下の手順を実施してください。
 
 このガイドでは、カーセンサースクレイパーをRenderのCron Jobとして無料でデプロイする方法を説明します。
+
+## 📌 ローカル実行との違い
+
+| 項目 | ローカル実行 | Render実行 |
+|------|------------|-----------|
+| 実行方法 | 手動で`python scraper.py` | 自動（スケジュール実行） |
+| PC稼働 | 実行時のみ必要 | 不要 |
+| データ保存 | ローカルファイル | GitHubに自動プッシュ |
+| コスト | 無料 | 無料 |
+| セットアップ | 簡単 | やや複雑 |
+
+**推奨**: まずはローカル実行で動作確認してから、必要に応じてRenderへ移行してください。
 
 ## 前提条件
 
 - GitHubアカウント
 - Renderアカウント（無料）
 - このリポジトリがGitHubにプッシュされていること
+- ローカル実行で動作確認済みであること
 
 ## アーキテクチャ
 
@@ -78,13 +97,36 @@ Renderのダッシュボードで環境変数を設定します。
 2. **Environment** タブをクリック
 3. 以下の環境変数を追加：
 
+#### 必須の環境変数
+
 | Key | Value | 説明 |
 |-----|-------|------|
 | `GITHUB_TOKEN` | `ghp_xxxxx...` | 手順1で作成したPAT |
 | `PYTHON_VERSION` | `3.11.0` | Python バージョン |
 | `PLAYWRIGHT_BROWSERS_PATH` | `/opt/render/.cache/ms-playwright` | Playwright キャッシュパス |
-| `GITHUB_USER_NAME` | `Carsensor Scraper Bot` | Gitコミット用のユーザー名 |
-| `GITHUB_USER_EMAIL` | `bot@example.com` | Gitコミット用のメール |
+| `AUTO_GIT_PUSH` | `true` | 自動Git Pushを有効化 |
+
+#### GitHub関連の環境変数（オプション）
+
+| Key | Value | デフォルト値 |
+|-----|-------|-------------|
+| `GITHUB_USER_NAME` | `Carsensor Scraper Bot` | `Carsensor Scraper` |
+| `GITHUB_USER_EMAIL` | `bot@example.com` | `scraper@example.com` |
+
+#### スクレイピング設定の環境変数（オプション）
+
+| Key | Value | デフォルト値 |
+|-----|-------|-------------|
+| `BASE_URL` | `https://www.carsensor.net` | `https://www.carsensor.net` |
+| `SHOP_URL` | 店舗ページURL | `https://www.carsensor.net/shop/miyagi/326411001/stocklist/` |
+| `OUTPUT_FILE` | `data/carsensor_inventory.json` | `data/carsensor_inventory.json` |
+| `REQUEST_DELAY` | `2` | `2` |
+| `PAGE_TIMEOUT` | `30000` | `30000` |
+| `USER_AGENT` | カスタムUA | デフォルトのChrome UA |
+
+**注**: 
+- `AUTO_GIT_PUSH=true` を設定することで、実行後に自動的にGitHubへプッシュします
+- デフォルト値で問題ない場合は、オプションの環境変数は設定不要です
 
 4. **Save Changes** をクリック
 

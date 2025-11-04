@@ -40,7 +40,7 @@ venv.bak/
 .DS_Store
 
 # Output data
-data/*.json
+# data/*.json  # JSONをGitHubで公開する場合はコメントアウト
 
 # Logs
 *.log

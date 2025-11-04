@@ -1,3 +1,11 @@
+# ======================================
+# Render.com クラウド自動実行設定
+# ======================================
+# このファイルはオプションです。
+# ローカル実行の場合は不要です。
+# Renderで自動実行したい場合のみ使用してください。
+# ======================================
+
 services:
   - type: cron
     name: carsensor-scraper
@@ -15,6 +23,8 @@ services:
         value: 3.11.0
       - key: PLAYWRIGHT_BROWSERS_PATH
         value: /opt/render/.cache/ms-playwright
+      - key: AUTO_GIT_PUSH
+        value: true  # Render実行時は自動プッシュを有効化
       - key: GITHUB_TOKEN
         sync: false  # Renderダッシュボードで手動設定
       - key: GITHUB_USER_NAME

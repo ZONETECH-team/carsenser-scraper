@@ -15,6 +15,10 @@ from urllib.parse import urljoin
 from datetime import datetime
 
 from playwright.sync_api import sync_playwright, Page, TimeoutError as PlaywrightTimeout
+from dotenv import load_dotenv
+
+# .envファイルから環境変数を読み込み
+load_dotenv()
 
 # ロギング設定
 logging.basicConfig(
@@ -23,15 +27,15 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# 定数
-BASE_URL = "https://www.carsensor.net"
-SHOP_URL = "https://www.carsensor.net/shop/miyagi/326411001/stocklist/"
-OUTPUT_FILE = "data/carsensor_inventory.json"
-REQUEST_DELAY = 2  # リクエスト間隔（秒）
-PAGE_TIMEOUT = 30000  # ページ読み込みタイムアウト（ミリ秒）
+# 定数（環境変数から読み込み、デフォルト値を設定）
+BASE_URL = os.getenv('BASE_URL', 'https://www.carsensor.net')
+SHOP_URL = os.getenv('SHOP_URL', 'https://www.carsensor.net/shop/miyagi/326411001/stocklist/')
+OUTPUT_FILE = os.getenv('OUTPUT_FILE', 'data/carsensor_inventory.json')
+REQUEST_DELAY = int(os.getenv('REQUEST_DELAY', '2'))  # リクエスト間隔（秒）
+PAGE_TIMEOUT = int(os.getenv('PAGE_TIMEOUT', '30000'))  # ページ読み込みタイムアウト（ミリ秒）
 
 # User-Agent
-USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+USER_AGENT = os.getenv('USER_AGENT', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
 
 
 def extract_car_links(page: Page) -> List[str]:
@@ -341,8 +345,13 @@ def main():
             logger.error("Failed to save JSON file")
             return 1
 
-        # GitHubにプッシュ
-        git_commit_and_push()
+        # GitHubにプッシュ（環境変数で有効化した場合のみ）
+        auto_push = os.getenv('AUTO_GIT_PUSH', 'false').lower() in ('true', '1', 'yes')
+        if auto_push:
+            logger.info("AUTO_GIT_PUSH is enabled. Pushing to GitHub...")
+            git_commit_and_push()
+        else:
+            logger.info("Data saved successfully. Run 'git add/commit/push' manually if needed.")
 
         logger.info(f"Scraping completed in {time.time() - start_time:.2f} seconds")
     else:
