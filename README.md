@@ -41,40 +41,32 @@ python scraper.py
 
 ## ☁️ Renderへのデプロイ
 
-### 1. GitHubリポジトリの準備
+このプロジェクトは**完全無料**でRenderにデプロイできます。
 
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/yourusername/carsensor-scraper.git
-git push -u origin main
+### クイックスタート
+
+1. GitHubリポジトリを作成・プッシュ
+2. [GitHub Personal Access Token](https://github.com/settings/tokens) を作成（`repo`スコープ）
+3. [Render](https://render.com)でBlueprint経由でデプロイ
+4. 環境変数 `GITHUB_TOKEN` を設定
+
+**詳細な手順は [デプロイガイド](docks/DEPLOY.md) を参照してください。**
+
+### データの取得方法
+
+スクレイピング結果は自動的にGitHubリポジトリにプッシュされます。
+以下のURLで取得可能：
+
+```
+https://raw.githubusercontent.com/zonehisa/carsenser-scraper/main/data/carsensor_inventory.json
 ```
 
-### 2. Renderでのセットアップ
-
-1. [Render](https://render.com) にログイン
-2. "New +" → "Cron Job" を選択
-3. GitHubリポジトリを接続
-4. 以下の設定を入力:
-   - **Name**: carsensor-scraper
-   - **Environment**: Python 3
-   - **Build Command**:
-     ```
-     pip install -r requirements.txt && playwright install chromium && playwright install-deps chromium
-     ```
-   - **Start Command**: `python scraper.py`
-   - **Schedule**: `0 9 * * *` (毎日9:00 UTC = 日本時間18:00)
-5. "Create Cron Job" をクリック
-
-**注意**: `render.yaml` ファイルを使用する場合は、リポジトリに含まれる設定が自動的に適用されます。
-
-### 3. 出力ファイルの公開設定
-
-Renderの設定で静的ファイルの公開パスを設定:
-- Publish Directory: `data`
-
-これにより `https://your-app.onrender.com/carsensor_inventory.json` でアクセス可能になります。
+JavaScriptでの取得例：
+```javascript
+fetch('https://raw.githubusercontent.com/zonehisa/carsenser-scraper/main/data/carsensor_inventory.json')
+  .then(response => response.json())
+  .then(data => console.log(data));
+```
 
 ## 📄 出力フォーマット
 
@@ -121,12 +113,12 @@ OUTPUT_FILE = "data/carsensor_inventory.json"
 ### プラグインでの使用
 
 WordPressプラグイン「CarSensor Sync」（別途開発予定）を使用して、
-RenderのJSONエンドポイントから在庫情報を取得し、サイト上に表示できます。
+GitHub Raw URLから在庫情報を取得し、サイト上に表示できます。
 
 ### 手動での使用
 
 ```php
-$json_url = 'https://your-app.onrender.com/carsensor_inventory.json';
+$json_url = 'https://raw.githubusercontent.com/zonehisa/carsenser-scraper/main/data/carsensor_inventory.json';
 $inventory = json_decode(file_get_contents($json_url), true);
 
 foreach ($inventory as $car) {

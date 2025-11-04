@@ -2,16 +2,22 @@ services:
   - type: cron
     name: carsensor-scraper
     env: python
-    schedule: "0 9 * * *"  # 毎日9時(UTC)に実行
+    schedule: "0 9 * * *"  # 毎日9時(UTC)に実行 = 日本時間18時
     buildCommand: |
       pip install -r requirements.txt
       playwright install chromium
       playwright install-deps chromium
     startCommand: python scraper.py
-    repo: https://github.com/yourusername/carsensor-scraper  # 実際のリポジトリURLに変更
+    repo: https://github.com/zonehisa/carsenser-scraper.git
     branch: main
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
       - key: PLAYWRIGHT_BROWSERS_PATH
         value: /opt/render/.cache/ms-playwright
+      - key: GITHUB_TOKEN
+        sync: false  # Renderダッシュボードで手動設定
+      - key: GITHUB_USER_NAME
+        value: Carsensor Scraper Bot
+      - key: GITHUB_USER_EMAIL
+        value: bot@carsensor-scraper.render.com

@@ -8,8 +8,11 @@ import json
 import time
 import logging
 import re
+import os
+import subprocess
 from typing import List, Dict, Optional
 from urllib.parse import urljoin
+from datetime import datetime
 
 from playwright.sync_api import sync_playwright, Page, TimeoutError as PlaywrightTimeout
 
@@ -246,6 +249,85 @@ def save_to_json(data: List[Dict[str, str]], filepath: str) -> bool:
         return False
 
 
+def git_commit_and_push() -> bool:
+    """
+    データファイルをGitにコミット＆プッシュ
+
+    環境変数:
+        GITHUB_TOKEN: GitHub Personal Access Token (必須)
+        GITHUB_USER_NAME: Gitユーザー名 (オプション)
+        GITHUB_USER_EMAIL: Gitメールアドレス (オプション)
+
+    Returns:
+        成功時True、失敗時False
+    """
+    try:
+        # GitHub Tokenの確認
+        github_token = os.getenv('GITHUB_TOKEN')
+        if not github_token:
+            logger.warning("GITHUB_TOKEN not set. Skipping git push.")
+            return False
+
+        # Git設定
+        git_user = os.getenv('GITHUB_USER_NAME', 'Carsensor Scraper')
+        git_email = os.getenv('GITHUB_USER_EMAIL', 'scraper@example.com')
+
+        logger.info("Configuring Git...")
+        subprocess.run(['git', 'config', 'user.name', git_user], check=True)
+        subprocess.run(['git', 'config', 'user.email', git_email], check=True)
+
+        # ファイルを追加
+        logger.info(f"Adding {OUTPUT_FILE}...")
+        subprocess.run(['git', 'add', OUTPUT_FILE], check=True)
+
+        # 変更があるか確認
+        result = subprocess.run(
+            ['git', 'status', '--porcelain'],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+
+        if not result.stdout.strip():
+            logger.info("No changes to commit.")
+            return True
+
+        # コミット
+        commit_message = f"Update inventory data - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+        logger.info(f"Committing: {commit_message}")
+        subprocess.run(['git', 'commit', '-m', commit_message], check=True)
+
+        # プッシュ（認証情報をURLに埋め込む）
+        logger.info("Pushing to GitHub...")
+        # リモートURLを取得
+        result = subprocess.run(
+            ['git', 'config', '--get', 'remote.origin.url'],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        remote_url = result.stdout.strip()
+
+        # HTTPSの場合、トークンを埋め込む
+        if remote_url.startswith('https://'):
+            # https://github.com/user/repo.git -> https://token@github.com/user/repo.git
+            auth_url = remote_url.replace('https://', f'https://{github_token}@')
+            subprocess.run(['git', 'push', auth_url, 'HEAD'], check=True)
+        else:
+            # SSH URLの場合はそのままプッシュ
+            subprocess.run(['git', 'push'], check=True)
+
+        logger.info("Successfully pushed to GitHub!")
+        return True
+
+    except subprocess.CalledProcessError as e:
+        logger.error(f"Git command failed: {e}")
+        return False
+    except Exception as e:
+        logger.error(f"Failed to push to GitHub: {e}")
+        return False
+
+
 def main():
     """メイン処理"""
     start_time = time.time()
@@ -255,7 +337,13 @@ def main():
 
     # JSON保存
     if inventory:
-        save_to_json(inventory, OUTPUT_FILE)
+        if not save_to_json(inventory, OUTPUT_FILE):
+            logger.error("Failed to save JSON file")
+            return 1
+
+        # GitHubにプッシュ
+        git_commit_and_push()
+
         logger.info(f"Scraping completed in {time.time() - start_time:.2f} seconds")
     else:
         logger.error("No data to save")
