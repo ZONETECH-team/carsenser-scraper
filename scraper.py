@@ -101,6 +101,33 @@ def extract_table_value(page: Page, label: str) -> str:
         return ""
 
 
+def clean_inspection_text(inspection_text: str) -> str:
+    """
+    車検情報をクリーンアップ
+    長い説明文から「車検整備付」などの重要情報のみを抽出
+
+    Args:
+        inspection_text: 元の車検情報テキスト
+
+    Returns:
+        クリーンアップされた車検情報
+    """
+    if not inspection_text:
+        return ""
+    
+    # 車検整備付が含まれる場合はそれを返す
+    if "車検整備付" in inspection_text:
+        return "車検整備付"
+    
+    # 通常の車検年月の場合（例: "2026(R08)年10月"）
+    # 複数行の説明文でない場合はそのまま返す
+    if "\n" not in inspection_text or len(inspection_text) < 50:
+        return inspection_text.strip()
+    
+    # 長い説明文の場合、最初の行のみを返す
+    return inspection_text.split('\n')[0].strip()
+
+
 def extract_car_details(page: Page, url: str) -> Optional[Dict[str, str]]:
     """
     車両詳細ページから情報を抽出
@@ -138,7 +165,7 @@ def extract_car_details(page: Page, url: str) -> Optional[Dict[str, str]]:
         except:
             pass
 
-        # 価格を抽出
+        # 本体価格を抽出
         price = ""
         try:
             price_element = page.query_selector('p.basePrice__price')
@@ -149,11 +176,24 @@ def extract_car_details(page: Page, url: str) -> Optional[Dict[str, str]]:
         except:
             pass
 
+        # 支払総額を抽出
+        total_price = ""
+        try:
+            # 支払総額の要素を探す
+            total_price_element = page.query_selector('p.totalPrice__price')
+            if total_price_element:
+                total_price_text = total_price_element.inner_text().strip()
+                # 価格を整形（改行を削除して統一）
+                total_price = re.sub(r'\s+', '', total_price_text)
+        except:
+            pass
+
         # テーブル情報を抽出
         year = extract_table_value(page, '年式')
         mileage = extract_table_value(page, '走行距離')
         engine_size = extract_table_value(page, '排気量')
-        inspection = extract_table_value(page, '車検')
+        inspection_raw = extract_table_value(page, '車検')
+        inspection = clean_inspection_text(inspection_raw)
         repair_history = extract_table_value(page, '修復歴')
 
         # メイン画像URLを抽出
@@ -174,11 +214,12 @@ def extract_car_details(page: Page, url: str) -> Optional[Dict[str, str]]:
             "inspection": inspection,
             "repair_history": repair_history,
             "price": price,
+            "total_price": total_price,
             "image_url": image_url,
             "detail_link": url
         }
 
-        logger.info(f"Extracted: {name} - {price}")
+        logger.info(f"Extracted: {name} - 本体価格: {price}, 支払総額: {total_price}")
         return car_data
 
     except PlaywrightTimeout:
