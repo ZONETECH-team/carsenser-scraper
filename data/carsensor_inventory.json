@@ -52,19 +52,6 @@
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6067571632/index.html"
   },
   {
-    "name": "トヨタ ダイナ",
-    "description": "キッチンカー　フードトラック　移動販売車 （ライトイエロー）",
-    "year": "2013(H25)",
-    "mileage": "9.1万km",
-    "engine_size": "1990cc",
-    "inspection": "車検整備付",
-    "repair_history": "なし",
-    "price": "208.0万円",
-    "total_price": "239万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/744/487/U00048744487/U00048744487_001L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6303364661/index.html"
-  },
-  {
     "name": "いすゞ エルフ",
     "description": "キッチンカー　フードトラック　移動販売車　 （レッド）",
     "year": "2009(H21)",
@@ -76,5 +63,18 @@
     "total_price": "294.8万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/803/810/U00048803810/U00048803810_001L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6311490624/index.html"
+  },
+  {
+    "name": "トヨタ ダイナ",
+    "description": "キッチンカー　フードトラック　移動販売車 （ライトイエロー）",
+    "year": "2013(H25)",
+    "mileage": "9.1万km",
+    "engine_size": "1990cc",
+    "inspection": "車検整備付",
+    "repair_history": "なし",
+    "price": "208.0万円",
+    "total_price": "239万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/744/487/U00048744487/U00048744487_001L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6303364661/index.html"
   }
 ]
