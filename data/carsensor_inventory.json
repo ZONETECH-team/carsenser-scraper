@@ -1,5 +1,31 @@
 [
   {
+    "name": "トヨタ RAV4",
+    "description": "2.5 ハイブリッド アドベンチャー E-Four 4WD　 （アーバンカーキ）",
+    "year": "2022(R04)",
+    "mileage": "11.7万km",
+    "engine_size": "2500cc",
+    "inspection": "2027(R09)年10月",
+    "repair_history": "なし",
+    "price": "253.0万円",
+    "total_price": "259.7万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/295/738/U00051295738/U00051295738_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6727083424/index.html"
+  },
+  {
+    "name": "スズキ ワゴンRスマイル",
+    "description": "660 ハイブリッド X　ディスプレイオーディオ　Bカメラ （パール）",
+    "year": "2024(R06)",
+    "mileage": "0.9万km",
+    "engine_size": "660cc",
+    "inspection": "2027(R09)年3月",
+    "repair_history": "なし",
+    "price": "151.0万円",
+    "total_price": "156万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/209/273/U00048209273/U00048209273_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6225008726/index.html"
+  },
+  {
     "name": "トヨタ ヴェルファイア",
     "description": "ハイブリッド 2.5 Zプレミア E-Four 4WD　黒革シート　禁煙車　後席モニター　ETC （プラチナホワイトパールマイカ）",
     "year": "2023(R05)",
@@ -8,22 +34,9 @@
     "inspection": "2026(R08)年10月",
     "repair_history": "なし",
     "price": "770.0万円",
-    "total_price": "777.7万円",
+    "total_price": "777.4万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/425/580/U00048425580/U00048425580_003L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6259052570/index.html"
-  },
-  {
-    "name": "スズキ ワゴンRスマイル",
-    "description": "660 ハイブリッド X　ディスプレイオーディオ　Bカメラ （パール）",
-    "year": "2024(R06)",
-    "mileage": "0.3万km",
-    "engine_size": "660cc",
-    "inspection": "2027(R09)年3月",
-    "repair_history": "なし",
-    "price": "165.0万円",
-    "total_price": "169.8万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/209/273/U00048209273/U00048209273_002L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6225008726/index.html"
   },
   {
     "name": "トヨタ ランドクルーザー250",
@@ -34,9 +47,22 @@
     "inspection": "2027(R09)年7月",
     "repair_history": "なし",
     "price": "770.0万円",
-    "total_price": "777.7万円",
+    "total_price": "777.3万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/056/261/U00050056261/U00050056261_007L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6554728468/index.html"
+  },
+  {
+    "name": "トヨタ ヤリス",
+    "description": "1.5 ハイブリッド Z　 （プラチナホワイトパールマイカ）",
+    "year": "2024(R06)",
+    "mileage": "0.6万km",
+    "engine_size": "1500cc",
+    "inspection": "2026(R08)年11月",
+    "repair_history": "なし",
+    "price": "242.0万円",
+    "total_price": "249.6万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/298/732/U00051298732/U00051298732_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6727089097/index.html"
   },
   {
     "name": "ダイハツ アトレーデッキバン",
@@ -63,6 +89,19 @@
     "total_price": "294.8万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/803/810/U00048803810/U00048803810_001L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6311490624/index.html"
+  },
+  {
+    "name": "日産 デイズ",
+    "description": "660 J　 （ブラウン）",
+    "year": "2017(H29)",
+    "mileage": "2.7万km",
+    "engine_size": "660cc",
+    "inspection": "2026(R08)年10月",
+    "repair_history": "なし",
+    "price": "90.0万円",
+    "total_price": "95万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/298/319/U00051298319/U00051298319_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6727087174/index.html"
   },
   {
     "name": "トヨタ ダイナ",
