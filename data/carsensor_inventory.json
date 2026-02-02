@@ -7,10 +7,23 @@
     "engine_size": "660cc",
     "inspection": "車検整備付",
     "repair_history": "なし",
-    "price": "92.0万円",
-    "total_price": "99.8万円",
+    "price": "90.0万円",
+    "total_price": "98万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/375/663/U00051375663/U00051375663_002L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6754452082/index.html"
+  },
+  {
+    "name": "ホンダ N-BOX",
+    "description": "660 G ホンダセンシング　バックカメラ　ドラレコ　ETC　運転支援　衝突軽減ブレーキ　ホンダセンシング　アダプティブクルーズコントロール　横滑り防止装置 （クリスタルブラック・パール）",
+    "year": "2019(R01)",
+    "mileage": "4.3万km",
+    "engine_size": "660cc",
+    "inspection": "2026(R08)年6月",
+    "repair_history": "なし",
+    "price": "100.0万円",
+    "total_price": "106万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/561/358/U00051561358/U00051561358_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6791755205/index.html"
   },
   {
     "name": "スズキ ワゴンRスマイル",
@@ -34,7 +47,7 @@
     "inspection": "2026(R08)年10月",
     "repair_history": "なし",
     "price": "770.0万円",
-    "total_price": "777.4万円",
+    "total_price": "777.1万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/425/580/U00048425580/U00048425580_004L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6259052570/index.html"
   },
@@ -52,17 +65,17 @@
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6776820978/index.html"
   },
   {
-    "name": "スズキ スペーシア",
-    "description": "660 ハイブリッド X セーフティプラスパッケージ装着車　全方位モニター付メモリーナビゲーション　セーフティプラス　スズキコネクト対応通信機装着車　両側電動スライドドア （オフブルーM ソフトベージュ2トーンルーフ）",
-    "year": "2025(R07)",
-    "mileage": "9km",
-    "engine_size": "660cc",
-    "inspection": "2028(R10)年2月",
+    "name": "トヨタ ランドクルーザー250",
+    "description": "2.7 VX ファースト エディション 4WD　ワンオーナー　丸目ヘッドライト ルーフラック JAOSフェンダーガーニッシュ モデリスタドアハンドルプロテクト モデリスタリアバンパーステップガード モデリスタバックドアガーニッシュ （サンド）",
+    "year": "2024(R06)",
+    "mileage": "700km",
+    "engine_size": "2700cc",
+    "inspection": "2027(R09)年7月",
     "repair_history": "なし",
-    "price": "193.0万円",
-    "total_price": "198万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/561/563/U00051561563/U00051561563_002L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6792116756/index.html"
+    "price": "770.0万円",
+    "total_price": "776.9万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/056/261/U00050056261/U00050056261_008L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6554728468/index.html"
   },
   {
     "name": "トヨタ ヤリスクロス",
@@ -73,35 +86,9 @@
     "inspection": "2027(R09)年2月",
     "repair_history": "なし",
     "price": "335.0万円",
-    "total_price": "339.8万円",
+    "total_price": "339.6万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/595/147/U00051595147/U00051595147_002L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6792130504/index.html"
-  },
-  {
-    "name": "ホンダ N-BOX",
-    "description": "660 G ホンダセンシング　バックカメラ　ドラレコ　ETC　運転支援　衝突軽減ブレーキ　ホンダセンシング　アダプティブクルーズコントロール　横滑り防止装置 （クリスタルブラック・パール）",
-    "year": "2019(R01)",
-    "mileage": "4.3万km",
-    "engine_size": "660cc",
-    "inspection": "2026(R08)年6月",
-    "repair_history": "なし",
-    "price": "100.0万円",
-    "total_price": "106万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/561/358/U00051561358/U00051561358_002L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6791755205/index.html"
-  },
-  {
-    "name": "トヨタ ランドクルーザー250",
-    "description": "2.7 VX ファースト エディション 4WD　ワンオーナー　丸目ヘッドライト ルーフラック JAOSフェンダーガーニッシュ モデリスタドアハンドルプロテクト モデリスタリアバンパーステップガード モデリスタバックドアガーニッシュ （サンド）",
-    "year": "2024(R06)",
-    "mileage": "700km",
-    "engine_size": "2700cc",
-    "inspection": "2027(R09)年7月",
-    "repair_history": "なし",
-    "price": "770.0万円",
-    "total_price": "777.3万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/056/261/U00050056261/U00050056261_008L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6554728468/index.html"
   },
   {
     "name": "スズキ ハスラー",
@@ -128,6 +115,19 @@
     "total_price": "198万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/375/855/U00051375855/U00051375855_003L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6754455363/index.html"
+  },
+  {
+    "name": "スズキ スペーシア",
+    "description": "660 ハイブリッド X セーフティプラスパッケージ装着車　全方位モニター付メモリーナビゲーション　セーフティプラス　スズキコネクト対応通信機装着車　両側電動スライドドア （オフブルーM ソフトベージュ2トーンルーフ）",
+    "year": "2025(R07)",
+    "mileage": "9km",
+    "engine_size": "660cc",
+    "inspection": "2028(R10)年2月",
+    "repair_history": "なし",
+    "price": "193.0万円",
+    "total_price": "198万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/561/563/U00051561563/U00051561563_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6792116756/index.html"
   },
   {
     "name": "ダイハツ アトレーデッキバン",
