@@ -13,19 +13,6 @@
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6754452082/index.html"
   },
   {
-    "name": "ホンダ N-BOX",
-    "description": "660 G ホンダセンシング　バックカメラ　ドラレコ　ETC　運転支援　衝突軽減ブレーキ　ホンダセンシング　アダプティブクルーズコントロール　横滑り防止装置 （クリスタルブラック・パール）",
-    "year": "2019(R01)",
-    "mileage": "4.3万km",
-    "engine_size": "660cc",
-    "inspection": "2026(R08)年6月",
-    "repair_history": "なし",
-    "price": "100.0万円",
-    "total_price": "106万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/561/358/U00051561358/U00051561358_002L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6791755205/index.html"
-  },
-  {
     "name": "スズキ ワゴンRスマイル",
     "description": "660 ハイブリッド X　ディスプレイオーディオ　Bカメラ （パール）",
     "year": "2024(R06)",
@@ -39,17 +26,17 @@
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6225008726/index.html"
   },
   {
-    "name": "トヨタ ヴェルファイア",
-    "description": "ハイブリッド 2.5 Zプレミア E-Four 4WD　黒革シート　禁煙車　後席モニター　ETC （プラチナホワイトパールマイカ）",
-    "year": "2023(R05)",
-    "mileage": "428km",
-    "engine_size": "2500cc",
-    "inspection": "2026(R08)年10月",
+    "name": "ホンダ N-BOX",
+    "description": "660 G ホンダセンシング　バックカメラ　ドラレコ　ETC　運転支援　衝突軽減ブレーキ　ホンダセンシング　アダプティブクルーズコントロール　横滑り防止装置 （クリスタルブラック・パール）",
+    "year": "2019(R01)",
+    "mileage": "4.3万km",
+    "engine_size": "660cc",
+    "inspection": "2026(R08)年6月",
     "repair_history": "なし",
-    "price": "770.0万円",
-    "total_price": "777.1万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/425/580/U00048425580/U00048425580_004L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6259052570/index.html"
+    "price": "100.0万円",
+    "total_price": "106万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/561/358/U00051561358/U00051561358_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6791755205/index.html"
   },
   {
     "name": "スズキ キャリイ",
@@ -63,6 +50,19 @@
     "total_price": "138万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/495/724/U00051495724/U00051495724_002L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6776820978/index.html"
+  },
+  {
+    "name": "トヨタ ヴェルファイア",
+    "description": "ハイブリッド 2.5 Zプレミア E-Four 4WD　黒革シート　禁煙車　後席モニター　ETC （プラチナホワイトパールマイカ）",
+    "year": "2023(R05)",
+    "mileage": "428km",
+    "engine_size": "2500cc",
+    "inspection": "2026(R08)年10月",
+    "repair_history": "なし",
+    "price": "770.0万円",
+    "total_price": "777.1万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/425/580/U00048425580/U00048425580_004L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6259052570/index.html"
   },
   {
     "name": "トヨタ ランドクルーザー250",
@@ -131,15 +131,15 @@
   },
   {
     "name": "ダイハツ アトレーデッキバン",
-    "description": "660 4WD　DAMD FUZZ仕様　ダムド　ファズ （グリーン）",
+    "description": "660 4WD　DAMD FUZZ・GEOLANDAR X-AT・下廻り防錆塗装・ディスプレイオーディオ・カーテン・荷台マット・インパネトレイシート （グリーン）",
     "year": "2024(R06)",
     "mileage": "0.3万km",
     "engine_size": "660cc",
     "inspection": "2026(R08)年9月",
     "repair_history": "なし",
-    "price": "272.0万円",
-    "total_price": "277万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/246/929/U00047246929/U00047246929_013L.JPG",
+    "price": "274.0万円",
+    "total_price": "279.8万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/246/929/U00047246929/U00047246929_015L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6067571632/index.html"
   },
   {
