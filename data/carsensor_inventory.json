@@ -1,9 +1,22 @@
 [
   {
+    "name": "スズキ キャリイ",
+    "description": "660 KCエアコン・パワステ 3方開 4WD　4AT・セーフティサポート[デュアルカメラブレーキ・誤発進抑制機能・パワーウィンドー・アイドリングストップ・キーレス （デニムブルーメタリック）",
+    "year": "2025(R07)",
+    "mileage": "4km",
+    "engine_size": "660cc",
+    "inspection": "2027(R09)年11月",
+    "repair_history": "なし",
+    "price": "133.0万円",
+    "total_price": "138万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/495/724/U00051495724/U00051495724_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6776820978/index.html"
+  },
+  {
     "name": "スズキ ワゴンRスマイル",
     "description": "660 ハイブリッド X　ディスプレイオーディオ　Bカメラ （パール）",
     "year": "2024(R06)",
-    "mileage": "0.9万km",
+    "mileage": "1.1万km",
     "engine_size": "660cc",
     "inspection": "2027(R09)年3月",
     "repair_history": "なし",
@@ -37,19 +50,6 @@
     "total_price": "98万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/375/663/U00051375663/U00051375663_002L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6754452082/index.html"
-  },
-  {
-    "name": "スズキ キャリイ",
-    "description": "660 KCエアコン・パワステ 3方開 4WD　4AT・セーフティサポート[デュアルカメラブレーキ・誤発進抑制機能・パワーウィンドー・アイドリングストップ・キーレス （デニムブルーメタリック）",
-    "year": "2025(R07)",
-    "mileage": "4km",
-    "engine_size": "660cc",
-    "inspection": "2027(R09)年11月",
-    "repair_history": "なし",
-    "price": "133.0万円",
-    "total_price": "138万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/495/724/U00051495724/U00051495724_002L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6776820978/index.html"
   },
   {
     "name": "トヨタ ヤリスクロス",
