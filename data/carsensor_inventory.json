@@ -1,7 +1,7 @@
 [
   {
     "name": "ダイハツ ムーヴキャンバス",
-    "description": "660 L 4WD　L　4WD　両側スライドドア　社外ワンセグナビ　アイドリングストップ　衝突安全ボディ　キーレス　電動格納ドアミラー　パワーウインドウ （ナチュラルベージュマイカメタリック）",
+    "description": "660 L 4WD　両側スライドドア　社外ワンセグナビ　アイドリングストップ　衝突安全ボディ　キーレス　電動格納ドアミラー　パワーウインドウ （ナチュラルベージュマイカメタリック）",
     "year": "2018(H30)",
     "mileage": "4.1万km",
     "engine_size": "660cc",
@@ -37,19 +37,6 @@
     "total_price": "156万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/209/273/U00048209273/U00048209273_003L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6225008726/index.html"
-  },
-  {
-    "name": "スズキ ハスラー",
-    "description": "660 ハイブリッド G　全方位モニター付きナビゲーション&スズキセーフティサポート・スズキコネクト対応通信機装着車・9インチディスプレイ・フルセグTV・DVD/CD・Bluetoothオーディオ （オフブルーM ソフトベージュ2トーン）",
-    "year": "2025(R07)",
-    "mileage": "0.1万km",
-    "engine_size": "660cc",
-    "inspection": "2028(R10)年3月",
-    "repair_history": "なし",
-    "price": "165.0万円",
-    "total_price": "169.8万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/443/907/U00051443907/U00051443907_002L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6766877227/index.html"
   },
   {
     "name": "スズキ スペーシア",
@@ -102,31 +89,5 @@
     "total_price": "278万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/246/929/U00047246929/U00047246929_015L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6067571632/index.html"
-  },
-  {
-    "name": "ダイハツ ムーヴ",
-    "description": "660 X SA　衝突軽減ブレーキスマートアシスト　プッシュボタンスタート　CD （プラムブラウンクリスタルマイカ）",
-    "year": "2014(H26)",
-    "mileage": "6.2万km",
-    "engine_size": "660cc",
-    "inspection": "車検整備付",
-    "repair_history": "なし",
-    "price": "81.0万円",
-    "total_price": "89万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/363/627/U00051363627/U00051363627_003L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6752238142/index.html"
-  },
-  {
-    "name": "いすゞ エルフ",
-    "description": "キッチンカー　フードトラック　移動販売車　 （レッド）",
-    "year": "2009(H21)",
-    "mileage": "12.3万km",
-    "engine_size": "2990cc",
-    "inspection": "車検整備付",
-    "repair_history": "なし",
-    "price": "268.0万円",
-    "total_price": "294.8万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/803/810/U00048803810/U00048803810_001L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6311490624/index.html"
   }
 ]
