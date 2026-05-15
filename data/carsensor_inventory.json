@@ -13,6 +13,19 @@
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6991271972/index.html"
   },
   {
+    "name": "スズキ アルトラパン",
+    "description": "LC 660 X　ディスプレイオーディオ　LEDヘッドランプ　キーレスプッシュスタート　衝突被害軽減ブレーキ　後退時ブレーキサポート　シートリフター　チルトステアリング　シートヒーター　フルオートエアコン （フォーンベージュM Uブラウン2トーンルーフ）",
+    "year": "2025(R07)",
+    "mileage": "0.7万km",
+    "engine_size": "660cc",
+    "inspection": "2028(R10)年3月",
+    "repair_history": "なし",
+    "price": "154.0万円",
+    "total_price": "159万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/758/879/U00052758879/U00052758879_004L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7009472226/index.html"
+  },
+  {
     "name": "トヨタ ヴェルファイア",
     "description": "ハイブリッド 2.5 Zプレミア E-Four 4WD　黒革シート　禁煙車　後席モニター　ETC （プラチナホワイトパールマイカ）",
     "year": "2023(R05)",
@@ -37,6 +50,19 @@
     "total_price": "156万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/209/273/U00048209273/U00048209273_003L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6225008726/index.html"
+  },
+  {
+    "name": "スズキ ハスラー",
+    "description": "660 ハイブリッド G　全方位モニター付きナビゲーション&スズキセーフティサポート・スズキコネクト対応通信機装着車・9インチディスプレイ・フルセグTV・DVD/CD・Bluetoothオーディオ （オフブルーM ソフトベージュ2トーン）",
+    "year": "2025(R07)",
+    "mileage": "0.1万km",
+    "engine_size": "660cc",
+    "inspection": "2028(R10)年3月",
+    "repair_history": "なし",
+    "price": "165.0万円",
+    "total_price": "169.8万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/443/907/U00051443907/U00051443907_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6766877227/index.html"
   },
   {
     "name": "スズキ スペーシア",
@@ -78,16 +104,29 @@
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6749809004/index.html"
   },
   {
-    "name": "ダイハツ アトレーデッキバン",
-    "description": "660 4WD　DAMD FUZZ・GEOLANDAR X-AT・下廻り防錆塗装・ディスプレイオーディオ・カーテン・荷台マット・インパネトレイシート （グリーン）",
-    "year": "2024(R06)",
-    "mileage": "0.3万km",
+    "name": "ダイハツ ムーヴ",
+    "description": "660 X SA　衝突軽減ブレーキスマートアシスト　プッシュボタンスタート　CD （プラムブラウンクリスタルマイカ）",
+    "year": "2014(H26)",
+    "mileage": "6.2万km",
     "engine_size": "660cc",
-    "inspection": "2026(R08)年9月",
+    "inspection": "車検整備付",
     "repair_history": "なし",
-    "price": "274.0万円",
-    "total_price": "278万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/246/929/U00047246929/U00047246929_015L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6067571632/index.html"
+    "price": "81.0万円",
+    "total_price": "89万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/363/627/U00051363627/U00051363627_003L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6752238142/index.html"
+  },
+  {
+    "name": "いすゞ エルフ",
+    "description": "キッチンカー　フードトラック　移動販売車　 （レッド）",
+    "year": "2009(H21)",
+    "mileage": "12.3万km",
+    "engine_size": "2990cc",
+    "inspection": "車検整備付",
+    "repair_history": "なし",
+    "price": "268.0万円",
+    "total_price": "294.8万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/803/810/U00048803810/U00048803810_001L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6311490624/index.html"
   }
 ]
