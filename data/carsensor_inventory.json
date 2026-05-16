@@ -52,6 +52,19 @@
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6225008726/index.html"
   },
   {
+    "name": "トヨタ ルーミー",
+    "description": "1.0 カスタム G　ワンオーナー/両側パワースライドドア/バックカメラ/ETC/クルーズコントロール/LEDヘットライト/フォグランプ/イルミネーションランプ/リアロールサンシャエイド/スマートキー/プッシュスタート （ブラックマイカメタリック）",
+    "year": "2018(H30)",
+    "mileage": "13.4万km",
+    "engine_size": "1000cc",
+    "inspection": "2027(R09)年11月",
+    "repair_history": "あり",
+    "price": "54.0万円",
+    "total_price": "62万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/782/138/U00052782138/U00052782138_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7015280034/index.html"
+  },
+  {
     "name": "スズキ ハスラー",
     "description": "660 ハイブリッド G　全方位モニター付きナビゲーション&スズキセーフティサポート・スズキコネクト対応通信機装着車・9インチディスプレイ・フルセグTV・DVD/CD・Bluetoothオーディオ （オフブルーM ソフトベージュ2トーン）",
     "year": "2025(R07)",
@@ -63,19 +76,6 @@
     "total_price": "169.8万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/443/907/U00051443907/U00051443907_002L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6766877227/index.html"
-  },
-  {
-    "name": "スズキ スペーシア",
-    "description": "660 ハイブリッド X セーフティプラスパッケージ装着車　全方位モニター付メモリーナビゲーション　セーフティプラス　スズキコネクト対応通信機装着車　両側電動スライドドア （オフブルーM ソフトベージュ2トーンルーフ）",
-    "year": "2025(R07)",
-    "mileage": "9km",
-    "engine_size": "660cc",
-    "inspection": "2028(R10)年2月",
-    "repair_history": "なし",
-    "price": "193.0万円",
-    "total_price": "198万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/561/563/U00051561563/U00051561563_002L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6792116756/index.html"
   },
   {
     "name": "トヨタ ランドクルーザー250",
@@ -102,6 +102,19 @@
     "total_price": "82万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/345/238/U00051345238/U00051345238_004L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6749809004/index.html"
+  },
+  {
+    "name": "スズキ スペーシア",
+    "description": "660 ハイブリッド X セーフティプラスパッケージ装着車　全方位モニター付メモリーナビゲーション　セーフティプラス　スズキコネクト対応通信機装着車　両側電動スライドドア （オフブルーM ソフトベージュ2トーンルーフ）",
+    "year": "2025(R07)",
+    "mileage": "9km",
+    "engine_size": "660cc",
+    "inspection": "2028(R10)年2月",
+    "repair_history": "なし",
+    "price": "193.0万円",
+    "total_price": "198万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/561/563/U00051561563/U00051561563_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6792116756/index.html"
   },
   {
     "name": "ダイハツ ムーヴ",
