@@ -1,5 +1,18 @@
 [
   {
+    "name": "スズキ ハスラー",
+    "description": "660 ハイブリッド G　 （ブルーイッシュブラックパール3）",
+    "year": "2021(R03)",
+    "mileage": "7.5万km",
+    "engine_size": "660cc",
+    "inspection": "2028(R10)年1月",
+    "repair_history": "なし",
+    "price": "92.0万円",
+    "total_price": "98万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/945/483/U00052945483/U00052945483_003L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7050175239/index.html"
+  },
+  {
     "name": "ダイハツ キャスト",
     "description": "アクティバ 660 Gターボ プライムコレクション SAIII 4WD　ターボ・SDナビ・バックカメラ・衝突被害軽減システム・禁煙車・スマートキー・ETC・オートハイビーム・オートライト・オートエアコン・Bluetooth・CD・DVD再生・フルセグ （ファイアークォーツレッド+デザインFトップ）",
     "year": "2019(R01)",
@@ -24,19 +37,6 @@
     "total_price": "89万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/697/287/U00052697287/U00052697287_002L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6991271972/index.html"
-  },
-  {
-    "name": "スズキ ハスラー",
-    "description": "660 ハイブリッド G　 （ブルーイッシュブラックパール3）",
-    "year": "2021(R03)",
-    "mileage": "7.5万km",
-    "engine_size": "660cc",
-    "inspection": "2028(R10)年1月",
-    "repair_history": "なし",
-    "price": "92.0万円",
-    "total_price": "98万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/945/483/U00052945483/U00052945483_003L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7050175239/index.html"
   },
   {
     "name": "スズキ アルトラパン",
@@ -73,7 +73,7 @@
     "inspection": "2026(R08)年10月",
     "repair_history": "なし",
     "price": "757.0万円",
-    "total_price": "769.7万円",
+    "total_price": "769.4万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/425/580/U00048425580/U00048425580_004L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6259052570/index.html"
   },
@@ -112,7 +112,7 @@
     "inspection": "2027(R09)年7月",
     "repair_history": "なし",
     "price": "759.0万円",
-    "total_price": "769.6万円",
+    "total_price": "769.2万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/056/261/U00050056261/U00050056261_008L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6554728468/index.html"
   },
