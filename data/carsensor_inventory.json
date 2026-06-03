@@ -13,19 +13,6 @@
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU7050175239/index.html"
   },
   {
-    "name": "ダイハツ キャスト",
-    "description": "アクティバ 660 Gターボ プライムコレクション SAIII 4WD　ターボ・SDナビ・バックカメラ・衝突被害軽減システム・禁煙車・スマートキー・ETC・オートハイビーム・オートライト・オートエアコン・Bluetooth・CD・DVD再生・フルセグ （ファイアークォーツレッド+デザインFトップ）",
-    "year": "2019(R01)",
-    "mileage": "9.4万km",
-    "engine_size": "660cc",
-    "inspection": "車検整備付",
-    "repair_history": "なし",
-    "price": "71.0万円",
-    "total_price": "79.8万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/804/584/U00052804584/U00052804584_002L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7020462593/index.html"
-  },
-  {
     "name": "ダイハツ ムーヴキャンバス",
     "description": "660 L 4WD　両側スライドドア　社外ワンセグナビ　アイドリングストップ　衝突安全ボディ　キーレス　電動格納ドアミラー　パワーウインドウ （ナチュラルベージュマイカメタリック）",
     "year": "2018(H30)",
@@ -37,6 +24,19 @@
     "total_price": "89万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/697/287/U00052697287/U00052697287_002L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6991271972/index.html"
+  },
+  {
+    "name": "ダイハツ キャスト",
+    "description": "アクティバ 660 Gターボ プライムコレクション SAIII 4WD　ターボ・SDナビ・バックカメラ・衝突被害軽減システム・禁煙車・スマートキー・ETC・オートハイビーム・オートライト・オートエアコン・Bluetooth・CD・DVD再生・フルセグ （ファイアークォーツレッド+デザインFトップ）",
+    "year": "2019(R01)",
+    "mileage": "9.4万km",
+    "engine_size": "660cc",
+    "inspection": "車検整備付",
+    "repair_history": "なし",
+    "price": "71.0万円",
+    "total_price": "79.8万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/804/584/U00052804584/U00052804584_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7020462593/index.html"
   },
   {
     "name": "スズキ ワゴンRスマイル",
