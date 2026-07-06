@@ -1,44 +1,5 @@
 [
   {
-    "name": "スズキ ハスラー",
-    "description": "660 ハイブリッド G　 （ブルーイッシュブラックパール3）",
-    "year": "2021(R03)",
-    "mileage": "7.5万km",
-    "engine_size": "660cc",
-    "inspection": "2028(R10)年1月",
-    "repair_history": "なし",
-    "price": "92.0万円",
-    "total_price": "98万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/945/483/U00052945483/U00052945483_003L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7050175239/index.html"
-  },
-  {
-    "name": "ダイハツ ムーヴキャンバス",
-    "description": "660 L 4WD　両側スライドドア　社外ワンセグナビ　アイドリングストップ　衝突安全ボディ　キーレス　電動格納ドアミラー　パワーウインドウ （ナチュラルベージュマイカメタリック）",
-    "year": "2018(H30)",
-    "mileage": "4.1万km",
-    "engine_size": "660cc",
-    "inspection": "2027(R09)年11月",
-    "repair_history": "なし",
-    "price": "82.9万円",
-    "total_price": "89万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/697/287/U00052697287/U00052697287_002L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6991271972/index.html"
-  },
-  {
-    "name": "ダイハツ キャスト",
-    "description": "アクティバ 660 Gターボ プライムコレクション SAIII 4WD　ターボ・SDナビ・バックカメラ・衝突被害軽減システム・禁煙車・スマートキー・ETC・オートハイビーム・オートライト・オートエアコン・Bluetooth・CD・DVD再生・フルセグ （ファイアークォーツレッド+デザインFトップ）",
-    "year": "2019(R01)",
-    "mileage": "9.4万km",
-    "engine_size": "660cc",
-    "inspection": "車検整備付",
-    "repair_history": "なし",
-    "price": "71.0万円",
-    "total_price": "79.8万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/804/584/U00052804584/U00052804584_002L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7020462593/index.html"
-  },
-  {
     "name": "スズキ ワゴンRスマイル",
     "description": "660 ハイブリッド X　ディスプレイオーディオ　Bカメラ （パール）",
     "year": "2024(R06)",
@@ -60,22 +21,35 @@
     "inspection": "2026(R08)年10月",
     "repair_history": "なし",
     "price": "757.0万円",
-    "total_price": "769.4万円",
+    "total_price": "769.1万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/425/580/U00048425580/U00048425580_004L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6259052570/index.html"
   },
   {
-    "name": "ホンダ N-WGN",
-    "description": "660 カスタムG ターボSSクールパッケージ　ETC　ステアリングスイッチ　横滑り防止　オートエアコン　オートライト　スマートキー　プッシュスタート （グレー）",
-    "year": "2015(H27)",
-    "mileage": "8.3万km",
+    "name": "ダイハツ ムーヴ",
+    "description": "660 X SA　衝突軽減ブレーキスマートアシスト　プッシュボタンスタート　CD （プラムブラウンクリスタルマイカ）",
+    "year": "2014(H26)",
+    "mileage": "6.2万km",
     "engine_size": "660cc",
     "inspection": "車検整備付",
     "repair_history": "なし",
-    "price": "73.0万円",
-    "total_price": "82万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/345/238/U00051345238/U00051345238_004L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6749809004/index.html"
+    "price": "60.0万円",
+    "total_price": "68万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/363/627/U00051363627/U00051363627_003L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6752238142/index.html"
+  },
+  {
+    "name": "トヨタ ランドクルーザー250",
+    "description": "2.7 VX ファースト エディション 4WD　ワンオーナー　オプション確認下さい　丸目ヘッドライト ルーフラック JAOSフェンダーガーニッシュ モデリスタドアハンドルプロテクト モデリスタリアバンパーステップガード モデリスタバックドアガーニッシュ （サンド）",
+    "year": "2024(R06)",
+    "mileage": "700km",
+    "engine_size": "2700cc",
+    "inspection": "2027(R09)年7月",
+    "repair_history": "なし",
+    "price": "759.0万円",
+    "total_price": "768.8万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/056/261/U00050056261/U00050056261_008L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6554728468/index.html"
   },
   {
     "name": "スズキ スペーシア",
@@ -89,32 +63,6 @@
     "total_price": "198万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/561/563/U00051561563/U00051561563_002L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6792116756/index.html"
-  },
-  {
-    "name": "トヨタ ランドクルーザー250",
-    "description": "2.7 VX ファースト エディション 4WD　ワンオーナー　オプション確認下さい　丸目ヘッドライト ルーフラック JAOSフェンダーガーニッシュ モデリスタドアハンドルプロテクト モデリスタリアバンパーステップガード モデリスタバックドアガーニッシュ （サンド）",
-    "year": "2024(R06)",
-    "mileage": "700km",
-    "engine_size": "2700cc",
-    "inspection": "2027(R09)年7月",
-    "repair_history": "なし",
-    "price": "759.0万円",
-    "total_price": "769.2万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/056/261/U00050056261/U00050056261_008L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6554728468/index.html"
-  },
-  {
-    "name": "ダイハツ ムーヴ",
-    "description": "660 X SA　衝突軽減ブレーキスマートアシスト　プッシュボタンスタート　CD （プラムブラウンクリスタルマイカ）",
-    "year": "2014(H26)",
-    "mileage": "6.2万km",
-    "engine_size": "660cc",
-    "inspection": "車検整備付",
-    "repair_history": "なし",
-    "price": "81.0万円",
-    "total_price": "89万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/363/627/U00051363627/U00051363627_003L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6752238142/index.html"
   },
   {
     "name": "いすゞ エルフ",
