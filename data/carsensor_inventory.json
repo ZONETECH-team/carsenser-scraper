@@ -1,5 +1,18 @@
 [
   {
+    "name": "スズキ ワゴンRスマイル",
+    "description": "660 ハイブリッド X　ディスプレイオーディオ　Bカメラ （パール）",
+    "year": "2024(R06)",
+    "mileage": "1.1万km",
+    "engine_size": "660cc",
+    "inspection": "2027(R09)年3月",
+    "repair_history": "なし",
+    "price": "151.0万円",
+    "total_price": "156万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/209/273/U00048209273/U00048209273_003L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU6225008726/index.html"
+  },
+  {
     "name": "トヨタ ヴェルファイア",
     "description": "ハイブリッド 2.5 Zプレミア E-Four 4WD　黒革シート　禁煙車　後席モニター　ETC （プラチナホワイトパールマイカ）",
     "year": "2023(R05)",
