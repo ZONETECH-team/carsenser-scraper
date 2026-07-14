@@ -16,7 +16,7 @@ services:
       playwright install chromium
       playwright install-deps chromium
     startCommand: python scraper.py
-    repo: https://github.com/zonehisa/carsenser-scraper.git
+    repo: https://github.com/ZONETECH-team/carsenser-scraper.git
     branch: main
     envVars:
       - key: PYTHON_VERSION

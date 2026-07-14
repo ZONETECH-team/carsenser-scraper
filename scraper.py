@@ -33,6 +33,9 @@ SHOP_URL = os.getenv('SHOP_URL', 'https://www.carsensor.net/shop/miyagi/32641100
 OUTPUT_FILE = os.getenv('OUTPUT_FILE', 'data/carsensor_inventory.json')
 REQUEST_DELAY = int(os.getenv('REQUEST_DELAY', '2'))  # リクエスト間隔（秒）
 PAGE_TIMEOUT = int(os.getenv('PAGE_TIMEOUT', '30000'))  # ページ読み込みタイムアウト（ミリ秒）
+DETAIL_MAX_RETRIES = int(os.getenv('DETAIL_MAX_RETRIES', '3'))  # 詳細ページ取得の最大試行回数
+RETRY_DELAY = int(os.getenv('RETRY_DELAY', '5'))  # リトライ間隔（秒）
+DETAIL_WAIT_UNTIL = os.getenv('DETAIL_WAIT_UNTIL', 'domcontentloaded')
 
 # User-Agent
 USER_AGENT = os.getenv('USER_AGENT', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
@@ -143,7 +146,7 @@ def extract_car_details(page: Page, url: str) -> Optional[Dict[str, str]]:
         logger.info(f"Fetching: {url}")
 
         # ページにアクセス
-        page.goto(url, wait_until='networkidle', timeout=PAGE_TIMEOUT)
+        page.goto(url, wait_until=DETAIL_WAIT_UNTIL, timeout=PAGE_TIMEOUT)
 
         # ページが完全に読み込まれるまで少し待機
         page.wait_for_timeout(1000)
@@ -230,6 +233,37 @@ def extract_car_details(page: Page, url: str) -> Optional[Dict[str, str]]:
         return None
 
 
+def extract_car_details_with_retries(page: Page, url: str) -> Optional[Dict[str, str]]:
+    """
+    車両詳細ページから情報を取得。失敗時は一定回数リトライする。
+
+    Args:
+        page: Playwrightページオブジェクト
+        url: 車両詳細ページのURL
+
+    Returns:
+        車両情報の辞書、全試行失敗時はNone
+    """
+    max_attempts = max(1, DETAIL_MAX_RETRIES)
+
+    for attempt in range(1, max_attempts + 1):
+        car_data = extract_car_details(page, url)
+        if car_data:
+            if attempt > 1:
+                logger.info(f"Successfully fetched after retry {attempt}/{max_attempts}: {url}")
+            return car_data
+
+        if attempt < max_attempts:
+            delay = RETRY_DELAY * attempt
+            logger.warning(
+                f"Retrying detail page {attempt + 1}/{max_attempts} in {delay} seconds: {url}"
+            )
+            time.sleep(delay)
+
+    logger.error(f"Failed to fetch detail page after {max_attempts} attempts: {url}")
+    return None
+
+
 def scrape_inventory() -> List[Dict[str, str]]:
     """
     在庫リスト全体をスクレイピング
@@ -239,6 +273,7 @@ def scrape_inventory() -> List[Dict[str, str]]:
     """
     logger.info("Starting scraping process...")
     inventory = []
+    failed_links = []
 
     with sync_playwright() as p:
         # ブラウザを起動
@@ -262,13 +297,25 @@ def scrape_inventory() -> List[Dict[str, str]]:
             for i, link in enumerate(car_links, 1):
                 logger.info(f"Processing car {i}/{len(car_links)}")
 
-                car_data = extract_car_details(page, link)
+                car_data = extract_car_details_with_retries(page, link)
                 if car_data:
                     inventory.append(car_data)
+                else:
+                    failed_links.append(link)
 
                 # サーバーに負荷をかけないよう待機
                 if i < len(car_links):
                     time.sleep(REQUEST_DELAY)
+
+            if failed_links or len(inventory) != len(car_links):
+                logger.error(
+                    "Incomplete scrape: expected %s cars but scraped %s. "
+                    "Skipping JSON save and Git push. Failed links: %s",
+                    len(car_links),
+                    len(inventory),
+                    ", ".join(failed_links) if failed_links else "(unknown)",
+                )
+                return []
 
             logger.info(f"Successfully scraped {len(inventory)} cars")
 
@@ -334,17 +381,16 @@ def git_commit_and_push() -> bool:
         logger.info(f"Adding {OUTPUT_FILE}...")
         subprocess.run(['git', 'add', OUTPUT_FILE], check=True)
 
-        # 変更があるか確認
+        # 在庫データの変更だけを確認
         result = subprocess.run(
-            ['git', 'status', '--porcelain'],
-            capture_output=True,
-            text=True,
-            check=True
+            ['git', 'diff', '--cached', '--quiet', '--', OUTPUT_FILE]
         )
 
-        if not result.stdout.strip():
-            logger.info("No changes to commit.")
+        if result.returncode == 0:
+            logger.info("No inventory changes to commit.")
             return True
+        if result.returncode != 1:
+            result.check_returncode()
 
         # コミット
         commit_message = f"Update inventory data - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
