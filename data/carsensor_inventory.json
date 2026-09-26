@@ -1,18 +1,5 @@
 [
   {
-    "name": "ダイハツ タント",
-    "description": "660 カスタム X スタイルセレクション　車高調・ローダウン・両側電動ドア・SDナビ・バックカメラ・衝突軽減装置・禁煙車・ハーフレザーシート・コーナーセンサー・スマートキー・フルセグ・Bluetooth・LEDヘッド・ETC・オートハイビーム （ブラック）",
-    "year": "2021(R03)",
-    "mileage": "4.8万km",
-    "engine_size": "660cc",
-    "inspection": "2028(R10)年2月",
-    "repair_history": "なし",
-    "price": "132.0万円",
-    "total_price": "139.8万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/485/716/U00053485716/U00053485716_003L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7170808372/index.html"
-  },
-  {
     "name": "トヨタ ヴェルファイア",
     "description": "ハイブリッド 2.5 Zプレミア E-Four 4WD　黒革シート　禁煙車　後席モニター　ETC （プラチナホワイトパールマイカ）",
     "year": "2023(R05)",
@@ -24,6 +11,32 @@
     "total_price": "698万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/425/580/U00048425580/U00048425580_004L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6259052570/index.html"
+  },
+  {
+    "name": "三菱 デリカミニ",
+    "description": "660 T プレミアム　サイドデカール　ブラックエンブレム　純正9インチナビ 全周囲 Bluetooth プッシュスタート ステアリングヒーター シートヒーター ステアリングヒーター 電動パーキングブレーキ 純正15インチアルミホイール （サンドベージュパール/ブラックマイカ）",
+    "year": "2025(R07)",
+    "mileage": "1.0万km",
+    "engine_size": "660cc",
+    "inspection": "2028(R10)年12月",
+    "repair_history": "なし",
+    "price": "244.0万円",
+    "total_price": "250万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/259/490/U00054259490/U00054259490_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7357780167/index.html"
+  },
+  {
+    "name": "スズキ スペーシア",
+    "description": "660 ハイブリッド X　全周囲モニター付純正9インチナビ　両側電動スライドドア　クリアランスソナー　衝突被害軽減システム　LEDヘッドランプ　CVT　盗難防止システム　衝突安全ボディ　エアコン　パワステ （オフブルーM ソフトベージュ2トーンルーフ）",
+    "year": "2024(R06)",
+    "mileage": "1.4万km",
+    "engine_size": "660cc",
+    "inspection": "2027(R09)年2月",
+    "repair_history": "なし",
+    "price": "160.0万円",
+    "total_price": "168万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/063/299/U00054063299/U00054063299_003L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7311052618/index.html"
   },
   {
     "name": "スズキ ワゴンRスマイル",
@@ -39,17 +52,17 @@
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6225008726/index.html"
   },
   {
-    "name": "スズキ スペーシア",
-    "description": "660 ハイブリッド X　全周囲モニター付純正9インチナビ　両側電動スライドドア　クリアランスソナー　衝突被害軽減システム　LEDヘッドランプ　CVT　盗難防止システム　衝突安全ボディ　エアコン　パワステ （オフブルーM ソフトベージュ2トーンルーフ）",
-    "year": "2024(R06)",
-    "mileage": "1.4万km",
-    "engine_size": "660cc",
-    "inspection": "2027(R09)年2月",
+    "name": "スズキ ジムニーノマド",
+    "description": "1.5 FC 4WD　 （アークティックホワイトパール）",
+    "year": "2025(R07)",
+    "mileage": "20km",
+    "engine_size": "1500cc",
+    "inspection": "2028(R10)年10月",
     "repair_history": "なし",
-    "price": "160.0万円",
-    "total_price": "168万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/063/299/U00054063299/U00054063299_003L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7311052618/index.html"
+    "price": "306.0万円",
+    "total_price": "316万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/071/791/U00054071791/U00054071791_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7357995314/index.html"
   },
   {
     "name": "スズキ スペーシア",
