@@ -13,17 +13,17 @@
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6259052570/index.html"
   },
   {
-    "name": "三菱 デリカミニ",
-    "description": "660 T プレミアム　サイドデカール　ブラックエンブレム　純正9インチナビ 全周囲 Bluetooth プッシュスタート ステアリングヒーター シートヒーター ステアリングヒーター 電動パーキングブレーキ 純正15インチアルミホイール （サンドベージュパール/ブラックマイカ）",
+    "name": "スズキ ジムニーノマド",
+    "description": "1.5 FC 4WD　スズキセーフティサポート・スマートキー・切替式4WD・ヘッドライトウォッシャー・アダプティブクルコン・アイドリングストップ・パーキングソナー・レーン逸脱防止アラート・ESC （アークティックホワイトパール）",
     "year": "2025(R07)",
-    "mileage": "1.0万km",
-    "engine_size": "660cc",
-    "inspection": "2028(R10)年12月",
+    "mileage": "20km",
+    "engine_size": "1500cc",
+    "inspection": "2028(R10)年10月",
     "repair_history": "なし",
-    "price": "244.0万円",
-    "total_price": "250万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/259/490/U00054259490/U00054259490_002L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7357780167/index.html"
+    "price": "306.0万円",
+    "total_price": "316万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/071/791/U00054071791/U00054071791_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7357995314/index.html"
   },
   {
     "name": "スズキ スペーシア",
@@ -52,17 +52,30 @@
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6225008726/index.html"
   },
   {
-    "name": "スズキ ジムニーノマド",
-    "description": "1.5 FC 4WD　 （アークティックホワイトパール）",
+    "name": "三菱 デリカミニ",
+    "description": "660 T プレミアム　サイドデカール　ブラックエンブレム　純正9インチナビ 全周囲 Bluetooth プッシュスタート ステアリングヒーター シートヒーター ステアリングヒーター 電動パーキングブレーキ 純正15インチアルミホイール （サンドベージュパール/ブラックマイカ）",
     "year": "2025(R07)",
-    "mileage": "20km",
-    "engine_size": "1500cc",
-    "inspection": "2028(R10)年10月",
+    "mileage": "1.0万km",
+    "engine_size": "660cc",
+    "inspection": "2028(R10)年12月",
     "repair_history": "なし",
-    "price": "306.0万円",
-    "total_price": "316万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/071/791/U00054071791/U00054071791_002L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7357995314/index.html"
+    "price": "244.0万円",
+    "total_price": "250万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/259/490/U00054259490/U00054259490_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7357780167/index.html"
+  },
+  {
+    "name": "スズキ キャリイ",
+    "description": "660 KCエアコン・パワステ スズキ セーフティサポート 装着車 3方開 4WD　ワンオーナー　純正オーディオ　マニュアルエアコン　衝突被害軽減ブレーキ　踏み間違い防止装置　横滑り防止装置 (スペリアホワイト) （スペリアホワイト）",
+    "year": "2020(R02)",
+    "mileage": "0.9万km",
+    "engine_size": "660cc",
+    "inspection": "車検整備付",
+    "repair_history": "なし",
+    "price": "99.0万円",
+    "total_price": "109万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/286/338/U00054286338/U00054286338_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7359904382/index.html"
   },
   {
     "name": "スズキ スペーシア",
