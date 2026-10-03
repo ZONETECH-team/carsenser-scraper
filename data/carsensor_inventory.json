@@ -26,19 +26,6 @@
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU7357995314/index.html"
   },
   {
-    "name": "スズキ スペーシア",
-    "description": "660 ハイブリッド X　全周囲モニター付純正9インチナビ　両側電動スライドドア　クリアランスソナー　衝突被害軽減システム　LEDヘッドランプ　CVT　盗難防止システム　衝突安全ボディ　エアコン　パワステ （オフブルーM ソフトベージュ2トーンルーフ）",
-    "year": "2024(R06)",
-    "mileage": "1.4万km",
-    "engine_size": "660cc",
-    "inspection": "2027(R09)年2月",
-    "repair_history": "なし",
-    "price": "160.0万円",
-    "total_price": "168万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/063/299/U00054063299/U00054063299_003L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7311052618/index.html"
-  },
-  {
     "name": "スズキ ワゴンRスマイル",
     "description": "660 ハイブリッド X　ディスプレイオーディオ　Bカメラ （パール）",
     "year": "2024(R06)",
@@ -52,17 +39,17 @@
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6225008726/index.html"
   },
   {
-    "name": "三菱 デリカミニ",
-    "description": "660 T プレミアム　サイドデカール　ブラックエンブレム　純正9インチナビ 全周囲 Bluetooth プッシュスタート ステアリングヒーター シートヒーター ステアリングヒーター 電動パーキングブレーキ 純正15インチアルミホイール （サンドベージュパール/ブラックマイカ）",
-    "year": "2025(R07)",
-    "mileage": "1.0万km",
+    "name": "スズキ スペーシア",
+    "description": "660 ハイブリッド X　全周囲モニター付純正9インチナビ　両側電動スライドドア　クリアランスソナー　衝突被害軽減システム　LEDヘッドランプ　CVT　盗難防止システム　衝突安全ボディ　エアコン　パワステ （オフブルーM ソフトベージュ2トーンルーフ）",
+    "year": "2024(R06)",
+    "mileage": "1.4万km",
     "engine_size": "660cc",
-    "inspection": "2028(R10)年12月",
+    "inspection": "2027(R09)年2月",
     "repair_history": "なし",
-    "price": "244.0万円",
-    "total_price": "250万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/259/490/U00054259490/U00054259490_002L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7357780167/index.html"
+    "price": "160.0万円",
+    "total_price": "168万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/063/299/U00054063299/U00054063299_003L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7311052618/index.html"
   },
   {
     "name": "スズキ キャリイ",
@@ -76,6 +63,19 @@
     "total_price": "109万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/286/338/U00054286338/U00054286338_002L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU7359904382/index.html"
+  },
+  {
+    "name": "三菱 デリカミニ",
+    "description": "660 T プレミアム　サイドデカール　ブラックエンブレム　純正9インチナビ 全周囲 Bluetooth プッシュスタート ステアリングヒーター シートヒーター ステアリングヒーター 電動パーキングブレーキ 純正15インチアルミホイール （サンドベージュパール/ブラックマイカ）",
+    "year": "2025(R07)",
+    "mileage": "1.0万km",
+    "engine_size": "660cc",
+    "inspection": "2028(R10)年12月",
+    "repair_history": "なし",
+    "price": "244.0万円",
+    "total_price": "250万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/259/490/U00054259490/U00054259490_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7357780167/index.html"
   },
   {
     "name": "スズキ スペーシア",
