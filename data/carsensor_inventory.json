@@ -39,19 +39,6 @@
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6225008726/index.html"
   },
   {
-    "name": "スズキ スペーシア",
-    "description": "660 ハイブリッド X　全周囲モニター付純正9インチナビ　両側電動スライドドア　クリアランスソナー　衝突被害軽減システム　LEDヘッドランプ　CVT　盗難防止システム　衝突安全ボディ　エアコン　パワステ （オフブルーM ソフトベージュ2トーンルーフ）",
-    "year": "2024(R06)",
-    "mileage": "1.4万km",
-    "engine_size": "660cc",
-    "inspection": "2027(R09)年2月",
-    "repair_history": "なし",
-    "price": "160.0万円",
-    "total_price": "168万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/063/299/U00054063299/U00054063299_003L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7311052618/index.html"
-  },
-  {
     "name": "スズキ キャリイ",
     "description": "660 KCエアコン・パワステ スズキ セーフティサポート 装着車 3方開 4WD　ワンオーナー　純正オーディオ　マニュアルエアコン　衝突被害軽減ブレーキ　踏み間違い防止装置　横滑り防止装置 (スペリアホワイト) （スペリアホワイト）",
     "year": "2020(R02)",
@@ -63,6 +50,19 @@
     "total_price": "109万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/286/338/U00054286338/U00054286338_002L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU7359904382/index.html"
+  },
+  {
+    "name": "スズキ スペーシア",
+    "description": "660 ハイブリッド X　全周囲モニター付純正9インチナビ　両側電動スライドドア　クリアランスソナー　衝突被害軽減システム　LEDヘッドランプ　CVT　盗難防止システム　衝突安全ボディ　エアコン　パワステ （オフブルーM ソフトベージュ2トーンルーフ）",
+    "year": "2024(R06)",
+    "mileage": "1.4万km",
+    "engine_size": "660cc",
+    "inspection": "2027(R09)年2月",
+    "repair_history": "なし",
+    "price": "160.0万円",
+    "total_price": "168万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/063/299/U00054063299/U00054063299_003L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7311052618/index.html"
   },
   {
     "name": "三菱 デリカミニ",
