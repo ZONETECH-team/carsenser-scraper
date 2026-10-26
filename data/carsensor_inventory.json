@@ -26,6 +26,19 @@
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU7357995314/index.html"
   },
   {
+    "name": "三菱 デリカミニ",
+    "description": "660 T プレミアム　ワンオーナー　サイドデカール　ブラックエンブレム　純正9インチディスプレイオーディオ 全周囲カメラ Bluetooth　ステアリングヒーター シートヒーター ステアリングヒーター 純正15インチアルミホイール （サンドベージュパール/ブラックマイカ）",
+    "year": "2025(R07)",
+    "mileage": "1.0万km",
+    "engine_size": "660cc",
+    "inspection": "2028(R10)年12月",
+    "repair_history": "なし",
+    "price": "244.0万円",
+    "total_price": "250万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/259/490/U00054259490/U00054259490_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7357780167/index.html"
+  },
+  {
     "name": "スズキ ワゴンRスマイル",
     "description": "660 ハイブリッド X　ディスプレイオーディオ　Bカメラ （パール）",
     "year": "2024(R06)",
@@ -50,19 +63,6 @@
     "total_price": "168万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/063/299/U00054063299/U00054063299_003L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU7311052618/index.html"
-  },
-  {
-    "name": "三菱 デリカミニ",
-    "description": "660 T プレミアム　ワンオーナー　サイドデカール　ブラックエンブレム　純正9インチディスプレイオーディオ 全周囲カメラ Bluetooth　ステアリングヒーター シートヒーター ステアリングヒーター 純正15インチアルミホイール （サンドベージュパール/ブラックマイカ）",
-    "year": "2025(R07)",
-    "mileage": "1.0万km",
-    "engine_size": "660cc",
-    "inspection": "2028(R10)年12月",
-    "repair_history": "なし",
-    "price": "244.0万円",
-    "total_price": "250万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/259/490/U00054259490/U00054259490_002L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7357780167/index.html"
   },
   {
     "name": "スズキ キャリイ",
@@ -104,19 +104,6 @@
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6554728468/index.html"
   },
   {
-    "name": "日産 デイズルークス",
-    "description": "660 X Vセレクション　両側電動ドア　SDナビ　全周囲カメラ　衝突被害軽減システム　ドラレコ　スマートキー　ETC　純正14インチアルミ　オートエアコン　Bluetooth　CD　DVD再生　地デジ （モカブラウンパール）",
-    "year": "2016(H28)",
-    "mileage": "5.3万km",
-    "engine_size": "660cc",
-    "inspection": "車検整備付",
-    "repair_history": "なし",
-    "price": "85.0万円",
-    "total_price": "95万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/526/820/U00054526820/U00054526820_002L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7422435092/index.html"
-  },
-  {
     "name": "スズキ スペーシア",
     "description": "660 ハイブリッド X セーフティプラスパッケージ装着車　全方位モニター付メモリーナビゲーション　セーフティプラス　スズキコネクト対応通信機装着車　両側電動スライドドア （オフブルーM ソフトベージュ2トーンルーフ）",
     "year": "2025(R07)",
@@ -128,6 +115,19 @@
     "total_price": "198万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/561/563/U00051561563/U00051561563_002L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU6792116756/index.html"
+  },
+  {
+    "name": "日産 デイズルークス",
+    "description": "660 X Vセレクション　両側電動ドア　SDナビ　全周囲カメラ　衝突被害軽減システム　ドラレコ　スマートキー　ETC　純正14インチアルミ　オートエアコン　Bluetooth　CD　DVD再生　地デジ （モカブラウンパール）",
+    "year": "2016(H28)",
+    "mileage": "5.3万km",
+    "engine_size": "660cc",
+    "inspection": "車検整備付",
+    "repair_history": "なし",
+    "price": "85.0万円",
+    "total_price": "95万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/526/820/U00054526820/U00054526820_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7422435092/index.html"
   },
   {
     "name": "いすゞ エルフ",
