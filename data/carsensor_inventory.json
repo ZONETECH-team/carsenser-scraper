@@ -26,19 +26,6 @@
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU7357995314/index.html"
   },
   {
-    "name": "日産 デイズ",
-    "description": "660 ハイウェイスターX　純正ディスプレイオーディオ9インチ　全周囲カメラ　衝突軽減　禁煙車　ドラレコ　ETC　コーナーセンサー　スマートキー　LEDヘッド　純正14インチアルミ　オートハイビーム　オートライト　オートエアコン （ホワイトパール3コートパール）",
-    "year": "2024(R06)",
-    "mileage": "1.0万km",
-    "engine_size": "660cc",
-    "inspection": "車検整備付",
-    "repair_history": "なし",
-    "price": "135.0万円",
-    "total_price": "144万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/071/287/U00054071287/U00054071287_002L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7453093588/index.html"
-  },
-  {
     "name": "スズキ スペーシア",
     "description": "660 ハイブリッド X　全周囲モニター付純正9インチナビ　両側電動スライドドア　クリアランスソナー　衝突被害軽減システム　LEDヘッドランプ　CVT　盗難防止システム　衝突安全ボディ　エアコン　パワステ （オフブルーM ソフトベージュ2トーンルーフ）",
     "year": "2024(R06)",
@@ -78,17 +65,17 @@
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU7357780167/index.html"
   },
   {
-    "name": "ダイハツ ムーヴキャンバス",
-    "description": "660 X　CDラジオ(USB接続可)　オートライト　両側スライドドア　オードエアコン　運転席シートリフター （ブラウン）",
-    "year": "2017(H29)",
-    "mileage": "8.2万km",
+    "name": "日産 デイズ",
+    "description": "660 ハイウェイスターX　純正ディスプレイオーディオ9インチ　全周囲カメラ　衝突軽減　禁煙車　ドラレコ　ETC　コーナーセンサー　スマートキー　LEDヘッド　純正14インチアルミ　オートハイビーム　オートライト　オートエアコン （ホワイトパール3コートパール）",
+    "year": "2024(R06)",
+    "mileage": "1.0万km",
     "engine_size": "660cc",
     "inspection": "車検整備付",
     "repair_history": "なし",
-    "price": "78.0万円",
-    "total_price": "88万円",
-    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/617/987/U00054617987/U00054617987_003L.JPG",
-    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7452315195/index.html"
+    "price": "135.0万円",
+    "total_price": "144万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/071/287/U00054071287/U00054071287_002L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7453093588/index.html"
   },
   {
     "name": "スズキ キャリイ",
@@ -102,6 +89,19 @@
     "total_price": "106万円",
     "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/286/338/U00054286338/U00054286338_004L.JPG",
     "detail_link": "https://www.carsensor.net/usedcar/detail/AU7359904382/index.html"
+  },
+  {
+    "name": "ダイハツ ムーヴキャンバス",
+    "description": "660 X　CDラジオ(USB接続可)　オートライト　両側スライドドア　オードエアコン　運転席シートリフター （ブラウン）",
+    "year": "2017(H29)",
+    "mileage": "8.2万km",
+    "engine_size": "660cc",
+    "inspection": "車検整備付",
+    "repair_history": "なし",
+    "price": "78.0万円",
+    "total_price": "88万円",
+    "image_url": "https://ccsrpcma.carsensor.net/CSphoto/bkkn/617/987/U00054617987/U00054617987_003L.JPG",
+    "detail_link": "https://www.carsensor.net/usedcar/detail/AU7452315195/index.html"
   },
   {
     "name": "スズキ スペーシア",
